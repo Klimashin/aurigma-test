@@ -1,0 +1,37 @@
+.controls, canvas {
+    display: inline-block;
+}
+
+.controls {
+    vertical-align: top;
+}
+
+.controls-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.controls-section>:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#cropArea {
+    position: absolute;
+    border: 2px solid;
+    border-style: dashed;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 100;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aurigma test task</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <canvas id="simple-editor" width="800" height="600"></canvas>
+    <div class="controls">
+        <div class='controls-section'>
+            <input type="file"/>
+        </div>
+        <div class='controls-section'>
+            <div>
+                <button id="decreaseBrightness">-</button>
+                <span>Brightness</span>
+                <button id="increaseBrightness">+</button>
+            </div>
+            <div><button id="grayscale">Grayscale</button></div>
+            <div><button id="restore">Restore Orginal</button></div>
+        </div>
+        <div class='controls-section'>
+            <div><button id="preview">Preview</button></div>
+            <div><button id="upload">Upload</button></div>
+        </div>
+    </div>
+</body>
+</html>
