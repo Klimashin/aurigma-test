@@ -227,12 +227,20 @@ var CropingTool = function(canvas) {
 };
 
 CropingTool.prototype.showCropArea = function() {
+    var cropAreaWidth = Math.abs(this.cropParams.endX - this.cropParams.startX);
+    var cropAreaHeight = Math.abs(this.cropParams.endY - this.cropParams.startY);
+
+    if (cropAreaWidth < 3 || cropAreaHeight < 3) {
+        // prevent clicks and small selections
+        return;
+    }
+
     $('body').append($('<div>', {
         'id' : 'cropArea'
     }).css('left', Math.min(this.cropParams.startX, this.cropParams.endX))
       .css('top', Math.min(this.cropParams.startY, this.cropParams.endY))
-      .width(Math.abs(this.cropParams.endX - this.cropParams.startX))
-      .height(Math.abs(this.cropParams.endY - this.cropParams.startY))
+      .width(cropAreaWidth)
+      .height(cropAreaHeight)
     );
 };
 
